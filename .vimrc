@@ -63,7 +63,7 @@ let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace wh
 set updatetime=100
 
 " vim-coffee-script
-autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 tabstop=2
 
 
 
