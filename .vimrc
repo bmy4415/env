@@ -63,7 +63,7 @@ let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace wh
 set updatetime=100
 
 " vim-coffee-script
-autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 tabstop=2
+autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 tabstop=2 expandtab
 
 
 
@@ -101,6 +101,7 @@ set tabstop=4
 set ruler " 현재 커서 위치 표시
 set incsearch
 " ?? set clipboard=unnamed
+set cursorline
 "set nowrap " 자동 줄바꿈 하지 않음
 set noeb vb t_vb= " 잘못 눌렀을 때 소리도안나고 빛도 안나게
 
