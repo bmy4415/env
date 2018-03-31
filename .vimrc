@@ -23,13 +23,13 @@ filetype plugin indent on    " required
 
 
 " syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 " nerdtree 
 nmap <F1> :NERDTreeToggle<CR>
@@ -104,6 +104,8 @@ set incsearch
 set cursorline
 "set nowrap " 자동 줄바꿈 하지 않음
 set noeb vb t_vb= " 잘못 눌렀을 때 소리도안나고 빛도 안나게
+
+" set mouse=r " enable copy with ctrl-c
 
 colorscheme molokai
 
