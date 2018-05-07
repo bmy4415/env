@@ -14,9 +14,10 @@ Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'pangloss/vim-javascript'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
+" Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -30,6 +31,12 @@ filetype plugin indent on    " required
 " let g:syntastic_auto_loc_list = 1
 " let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
+
+
+" vim-airline
+set statusline+=%#warningmsg#
+set statusline+=%*
+
 
 " nerdtree 
 nmap <F1> :NERDTreeToggle<CR>
@@ -85,8 +92,8 @@ set autoindent " 자동 들여쓰기
 set ts=4 "tag select
 set sts=4 "st select
 set sw=1 " 스크롤바 너비
-" set wildmode=list,longest,full // vim-airline때문에 지움
-" set wildmenu " wildmode 색칠 highlight // vim-airline때문에 지움
+" set wildmode=list,longest,full
+set wildmenu " vim command tab completion show
 set cindent " C언어 자동 들여쓰기
 set bs=eol,start,indent " backspace 사용
 set history=256 " viminfo에 쌓이는 histroy갯수 
