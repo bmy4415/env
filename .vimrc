@@ -8,14 +8,14 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
+" Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'pangloss/vim-javascript'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'pangloss/vim-javascript'
 
 " Plugin 'kchmck/vim-coffee-script'
 
