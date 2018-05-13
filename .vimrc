@@ -44,17 +44,6 @@ nmap <F1> :NERDTreeToggle<CR>
 " tagbar
 nmap <F2> :TagbarToggle<CR>
 
-" tagbar - coffee script
-let g:tagbar_type_coffee = {
-    \ 'ctagstype' : 'coffee',
-    \ 'kinds'     : [
-        \ 'c:classes',
-        \ 'm:methods',
-        \ 'f:functions',
-        \ 'v:variables',
-        \ 'f:fields',
-    \ ]
-\ }
 
 " nerdcommenter
 let mapleader=","
@@ -70,7 +59,7 @@ let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace wh
 set updatetime=100
 
 " vim-coffee-script
-autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 tabstop=2 expandtab
+" autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 tabstop=2 expandtab
 
 
 
