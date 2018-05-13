@@ -2,6 +2,8 @@
 vundle="$HOME/.vim/bundle/Vundle.vim" # common vundle path, ~/.vim/bundle/Vundle.vim
 molokai="$HOME/.vim/colors/molokai.vim" # molokai path, ~/.vim/colors/molokai.vim
 vimrc="$HOME/.vimrc" # common vimrc path, ~/.vimrc
+colors="$HOME/.vim/colors" # vim color themes directory
+
 
 # check whether vundle installed
 if [ ! -d "$vundle" ]
@@ -12,7 +14,7 @@ then
 fi
 
 
-#check whether molokai theme installed
+# check whether molokai theme installed
 if [ ! -f "$molokai" ]
 then
 	# molokai theme no installed, so install molokai theme
@@ -20,15 +22,18 @@ then
 	git clone https://github.com/tomasr/molokai.git ~/molokai
 
 	# if colors directory not exists, make it
-	if [ ! -d "$HOME/.vim/colors" ]
+	if [ ! -d "$colors" ]
 	then
-		mkdir -p $HOME/.vim/colors
+		vm ~/molokai/colors ~/.vim/
+	else
+		mv ~/molokai/colors/molokai.vim ~/.vim/colors/molokai.vim
 	fi
 
-	cp ~/molokai/colors/molokai.vim ~/.vim/colors/molokai.vim
 	rm -rf ~/molokai
 fi
 
+
+# check whether vimrc installed
 if [ -f "$vimrc" ]
 then
 	echo "vimrc already exists. If you want to use my .vimrc, remove your ~/.vimrc"
