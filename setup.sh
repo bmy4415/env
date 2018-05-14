@@ -24,7 +24,7 @@ then
 	# if colors directory not exists, make it
 	if [ ! -d "$colors" ]
 	then
-		vm ~/molokai/colors ~/.vim/
+		mv ~/molokai/colors ~/.vim/
 	else
 		mv ~/molokai/colors/molokai.vim ~/.vim/colors/molokai.vim
 	fi
