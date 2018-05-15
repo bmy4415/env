@@ -1,36 +1,16 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'scrooloose/syntastic'
+Plug 'zchee/deoplete-jedi'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'pangloss/vim-javascript' " javascript
+Plug 'tomasr/molokai'
+call plug#end()
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
-" Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'pangloss/vim-javascript' " javascript
-" Plugin 'kchmck/vim-coffee-script' " coffeescript
-Plugin 'shougo/neocomplete.vim'
-
-
-
-
-
-
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-
-
-" neocomplete
-let g:neocomplete#enable_at_startup = 1
 
 
 " syntastic
@@ -42,14 +22,22 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" deoplete
+let g:deoplete#enable_at_startup = 1
 
+
+" jedi, remove preview
+let g:jedi#auto_vim_configuration = 0
+set completeopt-=preview
+
+
+" set formatoptions-=cro // prevent comment keeping next line
 
 
 
 " vim-airline
 set statusline+=%#warningmsg#
 set statusline+=%*
-set statusline+=%F
 
 
 " vim-alrline-themes
@@ -62,7 +50,7 @@ let NERDTreeMapOpenInTab='<ENTER>' " nerdtree에서 enter치면 tab new
 
 
 " tagbar
-nmap <F2> :TagbarToggle<CR>
+" nmap <F2> :TagbarToggle<CR>
 
 
 " nerdcommenter
@@ -131,4 +119,3 @@ set noeb vb t_vb= " 잘못 눌렀을 때 소리도안나고 빛도 안나게
 
 
 colorscheme molokai
-
