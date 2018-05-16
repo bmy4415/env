@@ -9,6 +9,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript' " javascript
 Plug 'tomasr/molokai'
+Plug 'kchmck/vim-coffee-script'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 call plug#end()
 
 
@@ -24,6 +26,11 @@ let g:syntastic_check_on_wq = 0
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+
+
+"
+let g:python_host_prog = '/Users/bmy4415/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/Users/bmy4415/.pyenv/versions/neovim3/bin/python'
 
 
 " jedi, remove preview
