@@ -3,7 +3,7 @@ My custom setting for vim to use (I think) **minial settings** especially for bo
 
 - `homebrew` for OS X
 - `apt-get` for Linux
-- another packges will be describe below [`Installation`](##Installation)
+- another packges will be describe below [`Installation`](#-Installation)
 
 
 ## Installation
@@ -103,6 +103,7 @@ pip install neovim
 pyenv deactivate
 ```
 
+
 ### 3. Add init.vim
 
 We will make `init.vim` at `~/.config/nvim/init.vim`. This file does same as `.vimrc` in original `Vim`.
@@ -127,16 +128,35 @@ pyenv deactivate
 Then add below to `~/.config/nvim/init.vim`
 
 ```
-let g:python_host_prog = <Your result of pyenv which python on neovim2>
+let g:python_host_prog = '<Your result of pyenv which python on neovim2>'
 let g:python3_host_prog = '<Your result of pyenv which python on neovim3>'
 ```
 
-To check everyting goes well, start nvim and command `:CheckHeadlth`.
+To check everyting goes well, start `nvim` and command `:CheckHealth`. You can ignore `WARNING`.
 
+### 4. Install vim-plug
+To use vim plugin, install [`vim-plug`](https://github.com/junegunn/vim-plug).
 
+```
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
 
+Then add below to your `~/.config/nvim/init.vim`
 
-### 4.
+```
+call plug#begin('~/.local/share/nvim/plugged')
+call plug#end()
+```
+
+Finished!!. Now you can add any plugins or basic settings to your `~/.config/nvim/init.vim`. To add plugin,
+- add `Plug {plugin name}` to your `~/.config/nvim/init.vim`
+- :w
+- :source %
+- :PluginInstall
+
+Also you can use my `init.vim`.
+
 
 
 ## TODO
