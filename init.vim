@@ -1,7 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'scrooloose/syntastic'
-Plug 'zchee/deoplete-jedi'
+" Plug 'zchee/deoplete-jedi'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'airblade/vim-gitgutter'
@@ -9,34 +8,31 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript' " javascript
 Plug 'tomasr/molokai'
-Plug 'kchmck/vim-coffee-script'
+Plug 'w0rp/ale'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'Shougo/neco-syntax'
+
+
 call plug#end()
 
-
-
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
 
 
-"
-let g:python_host_prog = '/Users/bmy4415/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog = '/Users/bmy4415/.pyenv/versions/neovim3/bin/python'
+" ----- ale ----- 
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 1
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
 
 
-" jedi, remove preview
-let g:jedi#auto_vim_configuration = 0
-set completeopt-=preview
-
+" jedi, remove preview -------------------------------------------------------
+" let g:jedi#auto_vim_configuration = 0
+" set completeopt-=preview
+" ----------------------------------------------------------------------------
 
 " set formatoptions-=cro // prevent comment keeping next line
 
